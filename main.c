@@ -3,20 +3,16 @@
 #include <windows.h>
 #include <math.h>
 #include "1_1.h"
+#include "2_13.h"
 
 void selphysics();
 void selunit(int);
 void P1_2sel();
 void P1_3sel();
-void P2_1sel();
 void P2_2sel();
-void P2_3sel();
 void P1_2formula(int);
 void P1_3formula(int);
-void P2_1formula(int);
 void P2_2formula(int);
-void P2_3formula(int);
-void counting();
 
 int sel;
 
@@ -104,17 +100,7 @@ void P1_3sel()
 
 }
 
-void P2_1sel()
-{
-
-}
-
 void P2_2sel()
-{
-
-}
-
-void P2_3sel()
 {
 
 }
@@ -129,27 +115,7 @@ void P1_3formula(int n)
 
 }
 
-void P2_1formula(int n)
-{
-
-}
-
 void P2_2formula(int n)
 {
 
-}
-
-void P2_3formula(int n)
-{
-
-}
-
-void counting()
-{
-	for (int i = 5; i > 0; i--)
-	{
-		printf("%d초 후 메인으로 이동합니다\n", i);
-		Sleep(1000);
-	}
-	system("cls");
 }
