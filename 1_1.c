@@ -2,6 +2,7 @@
 #include <stdlib.h>
 #include <windows.h>
 #include <math.h>
+#include "system.h"
 
 int sel;
 
