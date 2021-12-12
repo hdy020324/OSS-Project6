@@ -3,6 +3,7 @@
 #include <windows.h>
 #include <math.h>
 #include "1_1.h"
+#include "1_2.h"
 #include "1_3.h"
 #include "2_13.h"
 
@@ -50,7 +51,7 @@ void selunit(int n)
 		}
 		else if (sel == 2)
 		{
-			// P1_2sel();
+			P1_2sel();
 		}
 		else if (sel == 3)
 		{
