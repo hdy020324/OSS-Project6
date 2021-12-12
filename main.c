@@ -3,16 +3,11 @@
 #include <windows.h>
 #include <math.h>
 #include "1_1.h"
+#include "1_3.h"
 #include "2_13.h"
 
 void selphysics();
 void selunit(int);
-void P1_2sel();
-void P1_3sel();
-void P2_2sel();
-void P1_2formula(int);
-void P1_3formula(int);
-void P2_2formula(int);
 
 int sel;
 
@@ -55,7 +50,7 @@ void selunit(int n)
 		}
 		else if (sel == 2)
 		{
-			P1_2sel();
+			// P1_2sel();
 		}
 		else if (sel == 3)
 		{
@@ -75,7 +70,7 @@ void selunit(int n)
 		}
 		else if (sel == 2)
 		{
-			P2_2sel();
+			// P2_2sel();
 		}
 		else if (sel == 3)
 		{
@@ -87,35 +82,4 @@ void selunit(int n)
 			return 0;
 		}
 	}
-}
-
-
-void P1_2sel()
-{
-
-}
-
-void P1_3sel()
-{
-
-}
-
-void P2_2sel()
-{
-
-}
-
-void P1_2formula(int n)
-{
-
-}
-
-void P1_3formula(int n)
-{
-
-}
-
-void P2_2formula(int n)
-{
-
 }
