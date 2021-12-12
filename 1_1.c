@@ -4,8 +4,6 @@
 #include <math.h>
 #include "system.h"
 
-int sel;
-
 void P1_1formula(int);
 void avrspeed();
 void avrvelocity();
@@ -19,6 +17,8 @@ void potentialenergy();
 
 void P1_1sel()
 {
+	int sel;
+
 	system("cls");
 	printf("1 : (평균)속력\n");
 	printf("2 : (평균)속도\n");
@@ -29,7 +29,6 @@ void P1_1sel()
 	printf("7 : 일률\n");
 	printf("8 : 운동에너지\n");
 	printf("9 : 중력에 의한 위치에너지\n");
-	printf("0 : 종료하기\n");
 	printf("> ");
 	scanf_s("%d", &sel);
 	P1_1formula(sel);
