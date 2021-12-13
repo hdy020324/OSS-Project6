@@ -6,6 +6,7 @@
 #include "1_2.h"
 #include "1_3.h"
 #include "2_1.h"
+#include "2_2.h"
 #include "2_3.h"
 
 void selphysics();
@@ -72,7 +73,7 @@ void selunit(int n)
 		}
 		else if (sel == 2)
 		{
-			// P2_2sel();
+			P2_2sel();
 		}
 		else if (sel == 3)
 		{

@@ -12,18 +12,17 @@ void in_mag_field();
 void en_photon();
 void en_at_spectrum();
 
-
 void P2_2sel()
 {
 	int sel;
 
 	system("cls");
-	printf("1 : Àü±â·Â\n");
-	printf("2 : Àü±âÀå\n");
-	printf("3 : ÀÚ±âÀåÀÇ ¼¼±â\n");
-	printf("4 : ÆÐ·¯µ¥ÀÌ ¹ýÄ¢\n");
-	printf("5 : ±¤ÀÚÀÇ ¿¡³ÊÁö\n");
-	printf("6 : ¿øÀÚ ½ºÆÑÆ®·³ÀÇ ¿¡³ÊÁö\n");
+	printf("1 : ì „ê¸°ë ¥\n");
+	printf("2 : ì „ê¸°ìž¥\n");
+	printf("3 : ìžê¸°ìž¥ì˜ ì„¸ê¸°\n");
+	printf("4 : íŒ¨ëŸ¬ë°ì´ ë²•ì¹™\n");
+	printf("5 : ê´‘ìžì˜ ì—ë„ˆì§€\n");
+	printf("6 : ì›ìž ìŠ¤íŒ©íŠ¸ëŸ¼ì˜ ì—ë„ˆì§€\n");
 	printf("> ");
 	scanf_s("%d", &sel);
 
@@ -36,155 +35,49 @@ void P2_2formula(int n)
 	{
 	case 1:
 		system("cls");
-		printf("Àü±â·Â\n");
-		printf("\"F=kx(Qq)/r^2\" Q,q[C], r[m], k[0. 8.9876x10^9xNxm^2xC^-2, Áø°ø]\n");
+		printf("ì „ê¸°ë ¥\n");
+		printf("\"F=kx(Qq)/r^2\" Q,q[C], r[m], k[0. 8.9876x10^9xNxm^2xC^-2, ì§„ê³µ]\n");
 		ele_for();
 		break;
 
 	case 2:
 		system("cls");
-		printf("Àü±âÀå");
+		printf("ì „ê¸°ìž¥");
 		printf("\"E=F/q\" [N/C]");
 		ele_field();
 		break;
 
 	case 3:
 		system("cls");
-		printf("ÀÚ±âÀåÀÇ ¼¼±â");
-		printf("\"B=¥Õ/s\" [T, 1T=1wb/m^2]\n");
+		printf("ìžê¸°ìž¥ì˜ ì„¸ê¸°");
+		printf("\"B=Î¦/s\" [T, 1T=1wb/m^2]\n");
 		in_mag_field();
 		break;
 
 	case 4:
 		system("cls");
-		printf("À¯µµ±âÀü·Â");
-		printf("\"V=-Nx¥Ä¥Õ/¥Ät\" [N: °¨Àº ÄÚÀÏÀÇ È½¼ö]");
+		printf("ìœ ë„ê¸°ì „ë ¥");
+		printf("\"V=-NxÎ”Î¦/Î”t\" [N: ê°ì€ ì½”ì¼ì˜ íšŸìˆ˜]");
 		far_law();
 		break;
 
 	case 5:
 		system("cls");
-		printf("±¤ÀÚÀÇ ¿¡³ÊÁö");
-		printf("\"E=hxc/¥ë\" [f=c/¥ë, h: ÇÃ¶ûÅ©»ó¼ö, c: ºûÀÇ ¼Ó·Â, ¥ë: ºûÀÇ ÆÄÀå]");
+		printf("ê´‘ìžì˜ ì—ë„ˆì§€");
+		printf("\"E=hxc/Î»\" [f=c/Î», h: í”Œëž‘í¬ìƒìˆ˜, c: ë¹›ì˜ ì†ë ¥, Î»: ë¹›ì˜ íŒŒìž¥]");
 		en_photon();
 		break;
 
 	case 6:
 		system("cls");
-		printf("½ºÆåÆ®·³ÀÇ ¿¡³ÊÁö");
-		printf("\"E=|Em-En|\" [m,n: ¾çÀÚ¼ö, ÀüÀÚ°¡ µÎ ±Ëµµ »çÀÌ¸¦ ÀÌµ¿ÇÒ ¶§ ¹æÃâ ¶Ç´Â Èí¼öÇÏ´Â ºûÀÇ ¿¡³ÊÁö] ");
+		printf("ìŠ¤íŽ™íŠ¸ëŸ¼ì˜ ì—ë„ˆì§€");
+		printf("\"E=|Em-En|\" [m,n: ì–‘ìžìˆ˜, ì „ìžê°€ ë‘ ê¶¤ë„ ì‚¬ì´ë¥¼ ì´ë™í•  ë•Œ ë°©ì¶œ ë˜ëŠ” í¡ìˆ˜í•˜ëŠ” ë¹›ì˜ ì—ë„ˆì§€] ");
 		en_at_spectrum();
 		break;
 
 	case 0:
-		printf("ÇÁ·Î±×·¥À» Á¾·áÇÕ´Ï´Ù.");
+		printf("í”„ë¡œê·¸ëž¨ì„ ì¢…ë£Œí•©ë‹ˆë‹¤.");
 		Sleep(1000);
 		exit(0);
 	}
-}
-
-void ele_for()				//Àü±â·Â electric_force
-{
-	double Q, q, r, result;
-
-	printf("Q: ");
-	scanf_s("%lf", &Q);
-	printf("q: ");
-	scanf_s("%lf", &q);
-	printf("r: ");
-	scanf_s("%lf", &r);
-
-	result = Q * q / (r * r);
-
-	printf("F= %f", result);
-	printf("\n");
-	counting();
-}
-
-void ele_field()		//Àü±âÀå electric_field
-{
-	double F, q, result;
-
-	printf("F: ");
-	scanf_s("%lf", &F);
-	printf("q: ");
-	scanf_s("%lf", &q);
-
-	result = F / q;
-
-	printf("E= %f", result);
-	printf("\n");
-	counting();
-}
-
-void far_law()				//À¯µµ±âÀü·Â Faraday's_Law
-{
-	double N, ¥Õ, t, result;
-
-	printf("N: ");
-	scanf_s("%lf", &N);
-	printf("¥Õ: ");
-	scanf_s("%lf", &¥Õ);
-	printf("t: ");
-	scanf_s("%lf", &t);
-
-	result = N * (¥Õ / t);
-
-	printf("V= %f", result);
-	printf("\n");
-	counting();
-}
-
-void in_mag_field()			//ÀÚ±âÀåÀÇ ¼¼±â intensity of magnetic field
-{
-	double ¥Õ, s, result;
-
-	printf("¥Õ: ");
-	scanf_s("%lf", &¥Õ);
-	printf("s: ");
-	scanf_s("%lf", &s);
-
-	result = ¥Õ / s;
-
-	printf("B= %f", result);
-	printf("\n");
-	counting();
-}
-
-void en_photon()			//±¤ÀÚÀÇ ¿¡³ÊÁö
-{
-	double c, ¥ë, result;
-
-	printf("c: ");
-	scanf_s("%lf", &c);
-	printf("¥ë: ");
-	scanf_s("%lf", &¥ë);
-
-	result = (c / ¥ë);
-
-	printf("E= %fh", result);
-	printf("\n");
-	counting();
-}
-
-void en_at_spectrum()		//¿øÀÚ½ºÆÑÆ®·³ÀÇ ¿¡³ÊÁö
-{
-	double Em, En, a, result;
-	result = 0;
-
-	printf("Em: ");
-	scanf_s("%lf", &Em);
-	printf("En: ");
-	scanf_s("%lf", &En);
-
-	a = Em - En;
-
-	if (a > 0)
-		result = a;
-	else if (a < 0)
-		result = -a;
-
-	printf("E= %f", result);
-	printf("\n");
-	counting();
 }
