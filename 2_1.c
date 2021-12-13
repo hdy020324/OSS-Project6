@@ -1,58 +1,21 @@
-#include<stdio.h>
-#include<math.h>
+#include <stdio.h>
+#define _USE_MATH_DEFINES
+#include <math.h>
+#include <windows.h>
+#include "system.h"
 
 double Vertical_upward_movement(int cho);
 double parabolic_motion(int cho);
 double inertial_force(int cho);
 double heat(int cho);
-
-void sub2_unit1();
-
-int main() {
-	int subject;
-	int unit1;
-	int unit2 = 0;
-	int choice;
-	int cho;
-
-	printf("\n");
-	printf("======== 과목 선택 ========\n");
-	printf("\n");
-	printf("1. 물리1\n");
-	printf("2. 물리2\n");
-	printf("\n");
-	printf("선택지를 고르시오 : ");
-	scanf_s("%d", &subject);
-
-	if (subject == 1) {
-		printf("\n");
-		printf("\n");
-		printf("======== 단원 선택 ========\n");
-		printf("\n");
-		printf("1. 힘과 에너지\n");
-		printf("2. 전기와 자기\n");
-		printf("3. 파동과 입자\n");
-		printf("\n");
-		printf("선택지를 고르시오 : ");
-		scanf_s("%d", &unit1);
-	}
-
-	if (unit2 == 1) {
-		sub2_unit1();
-	}
-
-
-	return 0;
-}
-
+void P2_1sel();
 
 //물리2 1단원
-void sub2_unit1() {
+void P2_1sel() {
 	int choice;
 	int cho;
 
-	printf("\n");
-	printf("\n");
+	system("cls");
 	printf("======== 공식 선택 ========\n");
 	printf("\n");
 	printf("1. 연직상방운동\n");
@@ -65,6 +28,7 @@ void sub2_unit1() {
 
 	if (choice == 1) {
 
+		system("cls");
 		printf("1. V는? \n");
 		printf("2. S는? \n");
 		printf("3. V^2는? \n");
@@ -73,9 +37,12 @@ void sub2_unit1() {
 		scanf_s("%d", &cho);
 
 		printf("답 : %lf", Vertical_upward_movement(cho));
+		printf("\n");
+		counting();
 	}
 	else if (choice == 2) {
 
+		system("cls");
 		printf("\n");
 		printf("1. 수평 - 지면 도달 시간\n");
 		printf("2. 수평 - 수평 도달 거리\n");
@@ -86,9 +53,12 @@ void sub2_unit1() {
 
 		printf("\n");
 		printf("답 : %lf", parabolic_motion(cho));
+		printf("\n");
+		counting();
 	}
 	else if (choice == 3) {
 
+		system("cls");
 		printf("\n");
 		printf("1. 관성력의 크기\n");
 		printf("2. 관성력의 방향\n");
@@ -100,9 +70,12 @@ void sub2_unit1() {
 
 		printf("\n");
 		printf("답 : %lf", inertial_force(cho));
+		printf("\n");
+		counting();
 	}
 	else if (choice == 4) {
 
+		system("cls");
 		printf("\n");
 		printf("1. 열량\n");
 		printf("2. 고온의 물체에서 저온의 물체로 전도 되어진 열의 양\n");
@@ -114,6 +87,8 @@ void sub2_unit1() {
 		scanf_s("%d", &cho);
 
 		printf("답 : %lf", heat(cho));
+		printf("\n");
+		counting();
 	}
 
 }
@@ -124,6 +99,7 @@ double Vertical_upward_movement(int cho) {
 
 
 	if (cho == 1) {
+		system("cls");
 		printf("\n");
 		printf("v = v0 - gt\n\n");
 
@@ -134,6 +110,7 @@ double Vertical_upward_movement(int cho) {
 		return (v0 - (g * t));
 	}
 	else if (cho == 2) {
+		system("cls");
 		printf("\n");
 		printf("s = v0t - ½gt²\n\n");
 
@@ -144,6 +121,7 @@ double Vertical_upward_movement(int cho) {
 		return ((v0 * t) - (1 / 2) * g * (t * t));
 	}
 	else if (cho == 3) {
+		system("cls");
 
 		printf("\n");
 		printf("v²- v0² = -2gs\n\n");
@@ -162,6 +140,7 @@ double parabolic_motion(int cho) {
 	double h, g, v0, t;
 
 	if (cho == 1) {
+		system("cls");
 		printf("\n");
 		printf("t = √(2h / g)\n\n");
 
@@ -172,6 +151,7 @@ double parabolic_motion(int cho) {
 		return (sqrt(2 * h / g));
 	}
 	else if (cho == 2) {
+		system("cls");
 		printf("\n");
 		printf("v0t\n\n");
 
@@ -183,12 +163,12 @@ double parabolic_motion(int cho) {
 	}
 }
 
-
 //관성력
 double inertial_force(int cho) {
 	double m, a, g, theta;
 
 	if (cho == 1) {
+		system("cls");
 		printf("\n");
 		printf("F = ma\n\n");
 
@@ -199,11 +179,13 @@ double inertial_force(int cho) {
 		return (m * a);
 	}
 	else if (cho == 2) {
+		system("cls");
 		printf("물체에 주어진 힘의 방향의 반대");
 		return 0;
 	}
 	else if (cho == 3)
 	{
+		system("cls");
 		printf("\n");
 		printf("a = gtanθ\n\n");
 
@@ -215,12 +197,12 @@ double inertial_force(int cho) {
 	}
 }
 
-
 //열량
 double heat(int cho) {
 	double m, c, t0, t, k, A, T1, T2, l, U1, U2, W, P1, P2, V, n, R;
 
 	if (cho == 1) {
+		system("cls");
 		printf("\n");
 		printf("Q = mcΔt \n\n");
 
@@ -231,6 +213,7 @@ double heat(int cho) {
 		return (c * m * (t - t0));
 	}
 	else if (cho == 2) {
+		system("cls");
 		printf("\n");
 		printf("    kA(T1 - T2)Δt\n");
 		printf("Q = --------------\n");
@@ -243,6 +226,7 @@ double heat(int cho) {
 		return ((k * A * (T1 - T2) * (t - t0)) / l);
 	}
 	else if (cho == 3) {
+		system("cls");
 		printf("\n");
 		printf("Q = ΔU + W\n\n");
 		printf("Q : 열, U : 내부 에너지, W : 일\n\n");
@@ -251,6 +235,7 @@ double heat(int cho) {
 		return ((U2 - U1) + W);
 	}
 	else if (cho == 4) {
+		system("cls");
 		printf("\n");
 		printf("W = PΔV\n\n");
 		printf("W : 일, P : 압력, ΔV : 부피의 변화량\n\n");
@@ -260,6 +245,7 @@ double heat(int cho) {
 		return ((P2 - P1) * V);
 	}
 	else if (cho == 5) {
+		system("cls");
 		printf("\n");
 		printf("ΔU = (3/2)ㅊnRΔT\n\n");
 		printf("ΔU : 내부 에너지 변화량, n : 몰 수, R : 일반 기체 상수, ΔT : 온도 변화량\n\n");
@@ -267,5 +253,4 @@ double heat(int cho) {
 		scanf_s("%lf %lf %lf %lf", &n, &R, &T1, &T2);
 		return ((3 / 2) * n * R * (T2 - T1));
 	}
-
 }
