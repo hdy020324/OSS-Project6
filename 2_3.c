@@ -1,62 +1,22 @@
-#include<stdio.h>
+#include <stdio.h>
 #define _USE_MATH_DEFINES
-#include<math.h>
-
+#include <math.h>
+#include <windows.h>
+#include "system.h"
 
 double wave_of_principle(int cho);
 double wave_rbdi(int cho);
 double doppler_I(int cho);
 double mirror_lens(int cho);
-
-void sub2_unit3();
-
-
-
-int main() {
-	int subject;
-	int unit1;
-	int unit2 = 0;
-	int choice;
-	int cho;
-
-	printf("\n");
-	printf("======== 과목 선택 ========\n");
-	printf("\n");
-	printf("1. 물리1\n");
-	printf("2. 물리2\n");
-	printf("\n");
-	printf("선택지를 고르시오 : ");
-	scanf_s("%d", &subject);
-
-
-	if (subject == 2) {
-		printf("\n");
-		printf("\n");
-		printf("======== 단원 선택 ========\n");
-		printf("\n");
-		printf("1. 운동과 에너지\n");
-		printf("2. 전기와 자기장\n");
-		printf("3. 파동과 빛\n");
-		printf("\n");
-		printf("선택지를 고르시오 : ");
-		scanf_s("%d", &unit2);
-	}
-
- if (unit2 == 3) {
-		sub2_unit3();
-	}
-
-	return 0;
-}
-
+double ew_l_p(int cho);
+void P2_3sel();
 
 //물리2 3단원
-void sub2_unit3() {
+void P2_3sel() {
 	int choice;
 	int cho;
 
-	printf("\n");
-	printf("\n");
+	system("cls");
 	printf("======== 공식 선택 ========\n");
 	printf("\n");
 	printf("1. 파동의 성질과 중첩의 원리\n");
@@ -65,11 +25,11 @@ void sub2_unit3() {
 	printf("4. 거울과 렌즈\n");
 	printf("5. 전자기파, 레이저, 편광\n");
 	printf("\n");
-
 	printf("선택지를 고르시오 : ");
 	scanf_s("%d", &choice);
 
 	if (choice == 1) {
+		system("cls");
 		printf("1. 파동의 속도 (λ,T)\n");
 		printf("2. 파동의 속도 (f,λ)\n");
 		printf("\n");
@@ -79,8 +39,11 @@ void sub2_unit3() {
 
 		printf("\n");
 		printf("답 : %lf", wave_of_principle(cho));
+		printf("\n");
+		counting();
 	}
 	else if (choice == 2) {
+		system("cls");
 		printf("1. 상대 굴절률 (매질1에서 매질2로의 굴절률)\n");
 		printf("2. 절대 굴절률\n");
 		printf("3. 보강 간섭의 조건 (경로차)\n");
@@ -92,8 +55,11 @@ void sub2_unit3() {
 
 		printf("\n");
 		printf("답 : %lf", wave_rbdi(cho));
+		printf("\n");
+		counting();
 	}
-     else if (choice == 3) {
+	else if (choice == 3) {
+		system("cls");
 		printf("1. 도플러 효과 (음속 v는?)\n");
 		printf("2. 도플러 효과 (진동수 f는?)\n");
 		printf("3. 충격량 - Δp\n");
@@ -105,8 +71,11 @@ void sub2_unit3() {
 
 		printf("\n");
 		printf("답 : %lf", doppler_I(cho));
+		printf("\n");
+		counting();
 	}
 	else if (choice == 4) {
+		system("cls");
 		printf("1. 상의 위치\n");
 		printf("2. 배율\n");
 		printf("\n");
@@ -116,8 +85,11 @@ void sub2_unit3() {
 
 		printf("\n");
 		printf("답 : %lf", mirror_lens(cho));
+		printf("\n");
+		counting();
 	}
 	else if (choice == 5) {
+		system("cls");
 		printf("1. 편광\n");
 		printf("2. LC 진동회로\n");
 
@@ -127,16 +99,18 @@ void sub2_unit3() {
 		scanf_s("%d", &cho);
 
 		printf("\n");
-		printf("답 : %lf", mirror_lens(cho));
+		printf("답 : %lf", ew_l_p(cho));
+		printf("\n");
+		counting();
 	}
 }
-
 
 //파동의 성질과 중첩의 원리
 double wave_of_principle(int cho) {
 	double λ, T, f;
 
 	if (cho == 1) {
+		system("cls");
 		printf("\n");
 		printf("v = λ/T\n\n");
 		printf("v : 속도, λ : 파장, T : 한 주기\n\n");
@@ -145,6 +119,7 @@ double wave_of_principle(int cho) {
 		return (λ / T);
 	}
 	else if (cho == 2) {
+		system("cls");
 		printf("\n");
 		printf("v = fλ\n\n");
 		printf("v : 속도, f : 주파수, λ : 파장\n\n");
@@ -161,6 +136,7 @@ double wave_rbdi(int cho) {
 	double λ, m, a, b, c, v;
 
 	if (cho == 1) {
+		system("cls");
 		printf("\n");
 		printf("      sinl    λ₁    v₁    n₂\n");
 		printf("n12 = ---- = ----- = ---- = ----\n");
@@ -173,6 +149,7 @@ double wave_rbdi(int cho) {
 		return (a / b);
 	}
 	else if (cho == 2) {
+		system("cls");
 		printf("\n");
 		printf("n = c/v\n\n");
 		printf("n : 굴절률, c : 빛, v : 속력\n\n");
@@ -181,6 +158,7 @@ double wave_rbdi(int cho) {
 		return (c / v);
 	}
 	else if (cho == 3) {
+		system("cls");
 		printf("\n");
 		printf("경로차(Δ) = (λ/2)(2m) = mλ\n\n");
 
@@ -190,6 +168,7 @@ double wave_rbdi(int cho) {
 		return ((λ / 2) * (2 * m));
 	}
 	else if (cho == 4) {
+		system("cls");
 		printf("\n");
 		printf("경로차(Δ) = (λ / 2)(2m + 1)\n\n");
 		printf("λ : 파장, m : 길이\n\n");
@@ -207,6 +186,7 @@ double doppler_I(int cho) {
 	double f, λ, v, p1, p2, m, v0;
 
 	if (cho == 1) {
+		system("cls");
 		printf("\n");
 		printf("v = fλ\n\n");
 		printf("v :  속도, f : 진동수, λ : 파장\n\n");
@@ -215,6 +195,7 @@ double doppler_I(int cho) {
 		return (f * λ);
 	}
 	else if (cho == 2) {
+		system("cls");
 		printf("\n");
 		printf("f = v / λ\n\n");
 		printf("f : 진동수, v :  속도, λ : 파장\n\n");
@@ -224,6 +205,7 @@ double doppler_I(int cho) {
 	}
 
 	else if (cho == 3) {
+		system("cls");
 		printf("\n");
 		printf("I = Δp (kgm/s)\n\n");
 		printf("I : 충격량, p : 운동량\n\n");
@@ -234,6 +216,7 @@ double doppler_I(int cho) {
 
 	}
 	else if (cho == 4) {
+		system("cls");
 		printf("\n");
 		printf("I = mv - mv0 (kgm/s)\n\n");
 		printf("I : 충격량, m : 질량, v : 속도\n\n");
@@ -251,6 +234,7 @@ double mirror_lens(int cho) {
 	double a, b, f;
 
 	if (cho == 1) {
+		system("cls");
 		printf("\n");
 		printf("1   1   1 \n");
 		printf("- + - = -  \n");
@@ -263,6 +247,7 @@ double mirror_lens(int cho) {
 		return ((1 / a) + (1 / b));
 	}
 	else if (cho == 2) {
+		system("cls");
 		printf("\n");
 		printf("    b \n");
 		printf("m = -  \n");
@@ -272,25 +257,26 @@ double mirror_lens(int cho) {
 		printf("f : 배율\n\n");
 		printf("a, b 순으로 입력하시오 : ");
 		scanf_s("%lf %lf", &a, &b);
-		return (b/a);
+		return (b / a);
 	}
 
 }
-
 
 //전자기파, 레이저, 편광
 double ew_l_p(int cho) {
 	double I0, θ, L, C;
 
 	if (cho == 1) {
+		system("cls");
 		printf("\n");
 		printf("I = I0cos²θ\n\n");
 		printf("I : 빛의 밝기, I0 : 초기 빛의 세기, θ : 초기 빛의 편광 방향과 편광판의 편광축 사이의 각의 크기\n\n");
 		printf("I0, θ 순으로 입력하시오 : ");
 		scanf_s("%lf %lf", &I0, &θ);
-		return (I0* cos(θ));
+		return (I0 * cos(θ));
 	}
 	else if (cho == 2) {
+		system("cls");
 		printf("\n");
 		printf("        1\n");
 		printf("f = ---------\n");
@@ -298,7 +284,6 @@ double ew_l_p(int cho) {
 		printf("f : 진동수, L : 코일, C : 축전기\n\n");
 		printf("L, C 순으로 입력하시오 : ");
 		scanf_s("%lf %lf", &L, &C);
-		return (2*M_PI*sqrt(L*C));
+		return (2 * M_PI * sqrt(L * C));
 	}
-
 }
