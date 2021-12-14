@@ -105,8 +105,13 @@ double Vertical_upward_movement(int cho) {
 
 		printf("v : 속력, v0 : 처음 속력, g : 중력가속도, t : 시간\n\n");
 
-		printf("v0,g,t 순으로 입력하시오 : ");
-		scanf_s("%lf %lf %lf", &v0, &g, &t);
+		printf("처음속력(v0) : ");
+		scanf_s("%lf", &v0);
+		printf("중력가속도(g) : ");
+		scanf_s("%lf", &g);
+		printf("시간(t) : ");
+		scanf_s("%lf", &t);
+
 		return (v0 - (g * t));
 	}
 	else if (cho == 2) {
@@ -116,8 +121,14 @@ double Vertical_upward_movement(int cho) {
 
 		printf("s : 거리, v0 : 처음 속력, t : 시간, g : 중력가속도\n\n");
 
-		printf("v0,g,t 순으로 입력하시오 : ");
-		scanf_s("%lf %lf %lf", &v0, &g, &t);
+
+		printf("처음속력(v0) : ");
+		scanf_s("%lf", &v0);
+		printf("중력가속도(g) : ");
+		scanf_s("%lf", &g);
+		printf("시간(t) : ");
+		scanf_s("%lf", &t);
+
 		return ((v0 * t) - (1 / 2) * g * (t * t));
 	}
 	else if (cho == 3) {
@@ -128,7 +139,12 @@ double Vertical_upward_movement(int cho) {
 
 		printf("v : 속력, v0 : 처음 속력, g : 중력가속도, s : 거리\n\n");
 
-		printf("g, s 순으로 입력하시오 : ");
+
+		printf("중력가속도(g) : ");
+		scanf_s("%lf", &g);
+		printf("거리(s) : ");
+		scanf_s("%lf", &s);
+
 		scanf_s("%lf %lf", &g, &s);
 		return ((-2) * g * s);
 	}
@@ -146,7 +162,11 @@ double parabolic_motion(int cho) {
 
 		printf("t : 시간 , h : 높이, g : 중력가속도\n\n");
 
-		printf("h, g 순으로 입력하시오 : ");
+		printf("높이(h) : ");
+		scanf_s("%lf", &h);
+		printf("중력가속도(g) : ");
+		scanf_s("%lf", &g);
+
 		scanf_s("%lf %lf", &h, &g);
 		return (sqrt(2 * h / g));
 	}
@@ -157,7 +177,11 @@ double parabolic_motion(int cho) {
 
 		printf("v0 : 처음 속력, t : 시간\n\n");
 
-		printf("v0, t 순으로 입력하시오 : ");
+		printf("처음속력(v0) : ");
+		scanf_s("%lf", &v0);
+		printf("시간(t) : ");
+		scanf_s("%lf", &t);
+
 		scanf_s("%lf %lf", &v0, &t);
 		return (v0 * t);
 	}
@@ -174,7 +198,11 @@ double inertial_force(int cho) {
 
 		printf("m : 질량, a : 가속도\n\n");
 
-		printf("m, a 순으로 입력하시오 : ");
+		printf("질량(m) : ");
+		scanf_s("%lf", &m);
+		printf("가속도(a) : ");
+		scanf_s("%lf", &a);
+
 		scanf_s("%lf %lf", &m, &a);
 		return (m * a);
 	}
@@ -191,7 +219,12 @@ double inertial_force(int cho) {
 
 		printf("a : 가속도, g : 중력가속도\n\n");
 
-		printf("g, θ순으로 입력하시오 : ");
+		printf("중력가속도(g) : ");
+		scanf_s("%lf", &g);
+		printf("θ : ");
+		scanf_s("%lf", &theta);
+
+
 		scanf_s("%lf %lf", &g, &theta);
 		return (g * tan(theta));
 	}
@@ -199,7 +232,7 @@ double inertial_force(int cho) {
 
 //열량
 double heat(int cho) {
-	double m, c, t0, t, k, A, T1, T2, l, U1, U2, W, P1, P2, V, n, R;
+	double m, c, t0, t, k, A, T1, T2, l, U1, U2, W, P, V1, V2, n, R;
 
 	if (cho == 1) {
 		system("cls");
@@ -208,7 +241,15 @@ double heat(int cho) {
 
 		printf("m : 질량, c : 비열, Δt : 온도변화\n\n");
 
-		printf("m, c, t0, t 순으로 입력하시오 : ");
+		printf("질량(m) : ");
+		scanf_s("%lf", &m);
+		printf("비열(c) : ");
+		scanf_s("%lf", &c);
+		printf("처음 온도(t0) : ");
+		scanf_s("%lf", &t0);
+		printf("나중 온도(t) : ");
+		scanf_s("%lf", &t);
+
 		scanf_s("%lf %lf %lf %lf", &m, &c, &t0, &t);
 		return (c * m * (t - t0));
 	}
@@ -221,8 +262,22 @@ double heat(int cho) {
 
 		printf("Q : 열, k : 볼츠만 상수, T : 온도, t : 시간\n\n");
 
-		printf("k, A, T1, T2, t0, t, l 순으로 입력하시오 : ");
-		scanf_s("%lf %lf %lf %lf %lf %lf %lf", &k, &A, &T1, &T2, &t0, &t, &l);
+
+		printf("열 전도율(k) : ");
+		scanf_s("%lf", &k);
+		printf("전달되는 판의 면적(A) : ");
+		scanf_s("%lf", &A);
+		printf("처음 온도(T1) : ");
+		scanf_s("%lf", &T1);
+		printf("현재 온도(T2) : ");
+		scanf_s("%lf", &T2);
+		printf("처음 시간(t0) : ");
+		scanf_s("%lf", &t0);
+		printf("나중 시간(t) : ");
+		scanf_s("%lf", &t);
+		printf("판의 두께(l) : ");
+		scanf_s("%lf", &l);
+
 		return ((k * A * (T1 - T2) * (t - t0)) / l);
 	}
 	else if (cho == 3) {
@@ -230,8 +285,14 @@ double heat(int cho) {
 		printf("\n");
 		printf("Q = ΔU + W\n\n");
 		printf("Q : 열, U : 내부 에너지, W : 일\n\n");
-		printf("U1, U2, W 순으로 입력하시오 : ");
-		scanf_s("%lf %lf %lf", &U1, &U2, &W);
+
+		printf("처음 내부에너지(U1) : ");
+		scanf_s("%lf", &U1);
+		printf("나중 내부에너지(U2) : ");
+		scanf_s("%lf", &U2);
+		printf("일(W) : ");
+		scanf_s("%lf", &W);
+
 		return ((U2 - U1) + W);
 	}
 	else if (cho == 4) {
@@ -240,17 +301,31 @@ double heat(int cho) {
 		printf("W = PΔV\n\n");
 		printf("W : 일, P : 압력, ΔV : 부피의 변화량\n\n");
 
-		printf("P1, P2, V 순으로 입력하시오 : ");
-		scanf_s("%lf %lf %lf", &P1, &P2, &V);
-		return ((P2 - P1) * V);
+		printf("압력(P) : ");
+		scanf_s("%lf", &P1);
+		printf("처음 부피(V1) : ");
+		scanf_s("%lf", &V1);
+		printf("나중 부피(V2) : ");
+		scanf_s("%lf", &V2);
+
+		return (P * (V2 - V1));
 	}
 	else if (cho == 5) {
 		system("cls");
 		printf("\n");
-		printf("ΔU = (3/2)ㅊnRΔT\n\n");
+		printf("ΔU = (3/2)nRΔT\n\n");
 		printf("ΔU : 내부 에너지 변화량, n : 몰 수, R : 일반 기체 상수, ΔT : 온도 변화량\n\n");
-		printf("n, R, T1, T2 순으로 입력하시오 : ");
-		scanf_s("%lf %lf %lf %lf", &n, &R, &T1, &T2);
+
+		printf("몰 수(n) : ");
+		scanf_s("%lf", &n);
+		printf("일반 기체 상수(R) : ");
+		scanf_s("%lf", &R);
+		printf("처음 온도(T1) : ");
+		scanf_s("%lf", &T1);
+		printf("나중 온도(T2) : ");
+		scanf_s("%lf", &T2);
+
+
 		return ((3 / 2) * n * R * (T2 - T1));
 	}
 }

@@ -114,8 +114,12 @@ double wave_of_principle(int cho) {
 		printf("\n");
 		printf("v = λ/T\n\n");
 		printf("v : 속도, λ : 파장, T : 한 주기\n\n");
-		printf("λ, T 순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &λ, &T);
+
+		printf("파장(λ) : ");
+		scanf_s("%lf", &λ);
+		printf("한 주기(T) : ");
+		scanf_s("%lf", &T);
+
 		return (λ / T);
 	}
 	else if (cho == 2) {
@@ -123,8 +127,12 @@ double wave_of_principle(int cho) {
 		printf("\n");
 		printf("v = fλ\n\n");
 		printf("v : 속도, f : 주파수, λ : 파장\n\n");
-		printf("f, λ순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &f, &λ);
+
+		printf("주파수(f) : ");
+		scanf_s("%lf", &f);
+		printf("파장(λ) : ");
+		scanf_s("%lf", &λ);
+
 		return (f * λ);
 	}
 
@@ -144,8 +152,11 @@ double wave_rbdi(int cho) {
 
 		printf("λ : 파장, v : 속도, n : 몰 수\n\n");
 
-		printf("n2, n1 또는 sinθ1, sinθ2 또는 V1, v2 또는 λ1, λ2 순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &a, &b);
+		printf("n2 or sinθ1 or V1 or λ1 : ");
+		scanf_s("%lf", &a);
+		printf("n1 or sinθ2 or V2 or λ2 : ");
+		scanf_s("%lf", &b);
+
 		return (a / b);
 	}
 	else if (cho == 2) {
@@ -153,18 +164,25 @@ double wave_rbdi(int cho) {
 		printf("\n");
 		printf("n = c/v\n\n");
 		printf("n : 굴절률, c : 빛, v : 속력\n\n");
-		printf("c, v 순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &c, &v);
+
+		printf("빛(c) : ");
+		scanf_s("%lf", &c);
+		printf("속력(v) : ");
+		scanf_s("%lf", &v);
+
 		return (c / v);
 	}
 	else if (cho == 3) {
 		system("cls");
 		printf("\n");
 		printf("경로차(Δ) = (λ/2)(2m) = mλ\n\n");
-
 		printf("λ : 파장, m : 길이\n\n");
-		printf("λ, m순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &λ, &m);
+
+		printf("파장(λ) : ");
+		scanf_s("%lf", &λ);
+		printf("길이(m) : ");
+		scanf_s("%lf", &m);
+
 		return ((λ / 2) * (2 * m));
 	}
 	else if (cho == 4) {
@@ -173,8 +191,11 @@ double wave_rbdi(int cho) {
 		printf("경로차(Δ) = (λ / 2)(2m + 1)\n\n");
 		printf("λ : 파장, m : 길이\n\n");
 
-		printf("λ, m순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &λ, &m);
+		printf("파장(λ) : ");
+		scanf_s("%lf", &λ);
+		printf("길이(m) : ");
+		scanf_s("%lf", &m);
+
 		return ((λ / 2) * ((2 * m) + 1));
 	}
 
@@ -191,7 +212,12 @@ double doppler_I(int cho) {
 		printf("v = fλ\n\n");
 		printf("v :  속도, f : 진동수, λ : 파장\n\n");
 		printf(" f, λ 순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &f, &λ);
+
+		printf("진동수(f) : ");
+		scanf_s("%lf", &f);
+		printf("파장(λ) : ");
+		scanf_s("%lf", &λ);
+
 		return (f * λ);
 	}
 	else if (cho == 2) {
@@ -199,8 +225,12 @@ double doppler_I(int cho) {
 		printf("\n");
 		printf("f = v / λ\n\n");
 		printf("f : 진동수, v :  속도, λ : 파장\n\n");
-		printf(" v, λ순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &v, &λ);
+
+		printf("속도(v) : ");
+		scanf_s("%lf", &v);
+		printf("파장(λ) : ");
+		scanf_s("%lf", &λ);
+
 		return (v / λ);
 	}
 
@@ -210,8 +240,11 @@ double doppler_I(int cho) {
 		printf("I = Δp (kgm/s)\n\n");
 		printf("I : 충격량, p : 운동량\n\n");
 
-		printf("p1, p2 순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &p1, &p2);
+		printf("처음 운동량(p1) : ");
+		scanf_s("%lf", &p1);
+		printf("나중 운동량(p2) : ");
+		scanf_s("%lf", &p2);
+
 		return (p2 - p1);
 
 	}
@@ -221,8 +254,14 @@ double doppler_I(int cho) {
 		printf("I = mv - mv0 (kgm/s)\n\n");
 		printf("I : 충격량, m : 질량, v : 속도\n\n");
 
-		printf("m, v, v0 순으로 입력하시오 : ");
-		scanf_s("%lf %lf %lf", &m, &v, &v0);
+		printf("질량(m) : ");
+		scanf_s("%lf", &m);
+		printf("속력(v) : ");
+		scanf_s("%lf", &v);
+		printf("처음 속력(v0) : ");
+		scanf_s("%lf", &v0);
+
+
 		return ((m * v) - (m * v0));
 
 	}
@@ -242,8 +281,12 @@ double mirror_lens(int cho) {
 		printf("a : 물체에서 거울까지의 거리 \n");
 		printf("b : 거울에서 상까지의 거리 (상이 거울앞에 있을때 (+),뒤에 있을 때 (-)), λ : 파장\n");
 		printf("f : 거울의 초점 거리\n\n");
-		printf("a, b 순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &a, &b);
+
+		printf("물체~거울 거리(a) : ");
+		scanf_s("%lf", &a);
+		printf("거울~상 거리(b) : ");
+		scanf_s("%lf", &b);
+
 		return ((1 / a) + (1 / b));
 	}
 	else if (cho == 2) {
@@ -255,8 +298,12 @@ double mirror_lens(int cho) {
 		printf("a : 물체에서 거울까지의 거리 \n");
 		printf("b : 거울에서 상까지의 거리 (상이 거울앞에 있을때 (+),뒤에 있을 때 (-)), λ : 파장\n");
 		printf("f : 배율\n\n");
-		printf("a, b 순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &a, &b);
+
+		printf("물체~거울 거리(a) : ");
+		scanf_s("%lf", &a);
+		printf("거울~상 거리(b) : ");
+		scanf_s("%lf", &b);
+
 		return (b / a);
 	}
 
@@ -271,8 +318,12 @@ double ew_l_p(int cho) {
 		printf("\n");
 		printf("I = I0cos²θ\n\n");
 		printf("I : 빛의 밝기, I0 : 초기 빛의 세기, θ : 초기 빛의 편광 방향과 편광판의 편광축 사이의 각의 크기\n\n");
-		printf("I0, θ 순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &I0, &θ);
+
+		printf("초기 빛의 세기(I0) : ");
+		scanf_s("%lf", &I0);
+		printf("초기 빛의 편광 방향과 편광판의 편광축 사이의 각의 크기(θ) : ");
+		scanf_s("%lf", &θ);
+
 		return (I0 * cos(θ));
 	}
 	else if (cho == 2) {
@@ -282,8 +333,12 @@ double ew_l_p(int cho) {
 		printf("f = ---------\n");
 		printf("    2π√(LC)\n\n");
 		printf("f : 진동수, L : 코일, C : 축전기\n\n");
-		printf("L, C 순으로 입력하시오 : ");
-		scanf_s("%lf %lf", &L, &C);
+
+		printf("코일(L) : ");
+		scanf_s("%lf", &L);
+		printf("축전기(C) : ");
+		scanf_s("%lf", &C);
+
 		return (2 * M_PI * sqrt(L * C));
 	}
 }
