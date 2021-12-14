@@ -83,10 +83,6 @@ void P1_1formula(int n)
 		printf("\n   \"Eρ = 9.8mh\"   단위 : J(줄)\n\n Eρ 중력에 의한 위치에너지\n m 질량\n h 높이\n");
 		potentialenergy();
 		break;
-	case 0:
-		printf("프로그램을 종료합니다");
-		Sleep(1000);
-		exit(0);
 	}
 }
 
