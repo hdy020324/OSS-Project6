@@ -145,7 +145,6 @@ double Vertical_upward_movement(int cho) {
 		printf("거리(s) : ");
 		scanf_s("%lf", &s);
 
-		scanf_s("%lf %lf", &g, &s);
 		return ((-2) * g * s);
 	}
 	return 0;
@@ -167,7 +166,6 @@ double parabolic_motion(int cho) {
 		printf("중력가속도(g) : ");
 		scanf_s("%lf", &g);
 
-		scanf_s("%lf %lf", &h, &g);
 		return (sqrt(2 * h / g));
 	}
 	else if (cho == 2) {
@@ -182,7 +180,6 @@ double parabolic_motion(int cho) {
 		printf("시간(t) : ");
 		scanf_s("%lf", &t);
 
-		scanf_s("%lf %lf", &v0, &t);
 		return (v0 * t);
 	}
 }
@@ -203,7 +200,6 @@ double inertial_force(int cho) {
 		printf("가속도(a) : ");
 		scanf_s("%lf", &a);
 
-		scanf_s("%lf %lf", &m, &a);
 		return (m * a);
 	}
 	else if (cho == 2) {
@@ -224,8 +220,6 @@ double inertial_force(int cho) {
 		printf("θ : ");
 		scanf_s("%lf", &theta);
 
-
-		scanf_s("%lf %lf", &g, &theta);
 		return (g * tan(theta));
 	}
 }
@@ -250,7 +244,6 @@ double heat(int cho) {
 		printf("나중 온도(t) : ");
 		scanf_s("%lf", &t);
 
-		scanf_s("%lf %lf %lf %lf", &m, &c, &t0, &t);
 		return (c * m * (t - t0));
 	}
 	else if (cho == 2) {
@@ -261,7 +254,6 @@ double heat(int cho) {
 		printf("           l      \n\n");
 
 		printf("Q : 열, k : 볼츠만 상수, T : 온도, t : 시간\n\n");
-
 
 		printf("열 전도율(k) : ");
 		scanf_s("%lf", &k);
@@ -324,8 +316,7 @@ double heat(int cho) {
 		scanf_s("%lf", &T1);
 		printf("나중 온도(T2) : ");
 		scanf_s("%lf", &T2);
-
-
+		
 		return ((3 / 2) * n * R * (T2 - T1));
 	}
 }
