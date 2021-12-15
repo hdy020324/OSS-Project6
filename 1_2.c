@@ -36,42 +36,42 @@ void P1_2formula(int n)
 	case 1:
 		system("cls");
 		printf("전기력\n");
-		printf("\"F=kx(Qq)/r^2\" Q,q[C], r[m], k[0. 8.9876x10^9xNxm^2xC^-2, 진공]\n");
+		printf("\"F=kx(Qq)/r^2\"\n Q,q[C], r[m], k[0. 8.9876x10^9xNxm^2xC^-2, 진공]\n");
 		ele_for();
 		break;
 
 	case 2:
 		system("cls");
-		printf("전기장");
-		printf("\"E=F/q\" [N/C]");
+		printf("전기장\n");
+		printf("\"E=F/q\"\n [N/C]\n");
 		ele_field();
 		break;
 
 	case 3:
 		system("cls");
-		printf("자기장의 세기");
-		printf("\"B=Φ/s\" [T, 1T=1wb/m^2]\n");
+		printf("자기장의 세기\n");
+		printf("\"B=Φ/s\"\n [T, 1T=1wb/m^2]\n\n");
 		in_mag_field();
 		break;
 
 	case 4:
 		system("cls");
-		printf("유도기전력");
-		printf("\"V=-NxΔΦ/Δt\" [N: 감은 코일의 횟수]");
+		printf("유도기전력\n");
+		printf("\"V=-NxΔΦ/Δt\"\n [N: 감은 코일의 횟수]\n");
 		far_law();
 		break;
 
 	case 5:
 		system("cls");
-		printf("광자의 에너지");
-		printf("\"E=hxc/λ\" [f=c/λ, h: 플랑크상수, c: 빛의 속력, λ: 빛의 파장]");
+		printf("광자의 에너지\n");
+		printf("\"E=hxc/λ\"\n [f=c/λ, h: 플랑크상수, c: 빛의 속력(30만km), λ: 빛의 파장]\n");
 		en_photon();
 		break;
 
 	case 6:
 		system("cls");
-		printf("스펙트럼의 에너지");
-		printf("\"E=|Em-En|\" [m,n: 양자수, 전자가 두 궤도 사이를 이동할 때 방출 또는 흡수하는 빛의 에너지] ");
+		printf("스펙트럼의 에너지\n");
+		printf("\"E=|Em-En|\"\n [m,n: 양자수, 전자가 두 궤도 사이를 이동할 때 방출 또는 흡수하는 빛의 에너지]\n ");
 		en_at_spectrum();
 		break;
 
