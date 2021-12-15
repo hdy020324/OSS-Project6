@@ -302,7 +302,7 @@ double heat(int cho) {
 		printf("W : 일, P : 압력, ΔV : 부피의 변화량\n\n");
 
 		printf("압력(P) : ");
-		scanf_s("%lf", &P1);
+		scanf_s("%lf", &P);
 		printf("처음 부피(V1) : ");
 		scanf_s("%lf", &V1);
 		printf("나중 부피(V2) : ");
